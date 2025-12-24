@@ -1,0 +1,15 @@
+name: Execute cURL Request
+
+on:
+  workflow_dispatch:      # Allows you to click a "Run" button manually
+ 
+
+jobs:
+  run_curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run cURL command
+        run: |
+         curl --location 'https://app.v3.fireflink.com/dashboardexecution/optimize/v3/public/cicd/default-machine' \
+--header "Content-Type: application/json" \
+--data-raw "{  \"suiteId\" : \"SUITE_445655d9-9df8-4e0f-bac6-f751be90ada6\",  \"waitConfig\" : {    \"captureScreenshots\" : \"failedSteps\",    \"captureVideos\" : \"notCapture\",    \"delayBetweenSteps\" : \"0\",    \"delayBetweenStepsUnit\" : \"Seconds\",    \"explicitWait\" : \"20\",    \"explicitWaitUnit\" : \"Seconds\",    \"implicitWait\" : \"20\",    \"implicitWaitUnit\" : \"Seconds\",    \"terminateScriptIfTakesMoreTime\" : \"0\",    \"terminateScriptUnit\" : \"Minutes\",    \"terminateSuiteIfTakesMoreTime\" : \"2\",    \"terminateSuiteUnit\" : \"Hours\"  },  \"licenseId\" : \"LIC26229\",  \"accessToken\" : \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNTnNvS1VYQkxLS3BPblpWUUxaZWhwcGhobHdJSldCYUF4dDRkaXMwNlcwIn0.eyJleHAiOjE3NjY2NjM2NzcsImlhdCI6MTc2NjU3NzI3NywianRpIjoib25ydG5hOjBmYTFkYjAzLTJmNzktNDFkMy04ZGVlLTY0YTMwMDhkOWM5MSIsImlzcyI6Imh0dHBzOi8vYXBwLnYzLmZpcmVmbGluay5jb206MzAxMDEvcmVhbG1zL0ZpcmVGbGluayIsInN1YiI6ImY6ODg5MjliMDAtNzNiOC00NzRmLWJiYmMtZGIyZTFhM2UwNzk4Om5hbmRpbmlAZmlyZWZsaW5rLmNvbSIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhcmdldC1jbGllbnQiLCJzaWQiOiIxM2ExYzE5Mi03ZjNhLTQ1OGItYWE1NC02YmNkODdkODdjYTgiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImN1cnJlbnRMaWNlbnNlSWQiOiJMSUMyNjIyOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY3VycmVudFByaXZpbGVnZSI6IkFkbWluIiwiZnVsbE5hbWUiOiJOYW5kaW5pIiwiYWN0aXZhdGlvblN0YXR1cyI6IkFDVElWRSIsInByaXZpbGVnZSI6IkFkbWluIiwibGljZW5zZU5hbWUiOiJmaXJlLWZsaW5rLUxJQzI2MjI5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiTmFuZGluaSIsInVzZXJOYW1lIjoibmFuZGluaUBmaXJlZmxpbmsuY29tIiwiYmlsbGluZ0N5Y2xlIjoiSGFsZlllYXJseSIsImlkIjoiVVNSMTAxNDg5MjgiLCJsaWNlbnNlSWQiOiJMSUMyNjIyOSIsImVtYWlsIjoibmFuZGluaUBmaXJlZmxpbmsuY29tIn0.NMgB_wi-A_6NS6Lv_SyPfqBh3QNWI9foKkLdY75L1TsA3u3tUZ13OSp5VKl2ITQ_4EaacsS3L9tb3WJZQG6dDrXU0ACvBm770uFxT5wmNBtQsFK5vdJkhb7SS8M4zz5BaPhHz9anrqKAiuiNCRNf90l_wmsu8wmqL64oPdtY9f3IxOyB4V7hnJosqGF_qSLUC8lvCLsUgHndEm2hYqZclfBIkWi6lZjUrJPRQiYgXLyM0ZwNBP8Gjw8Af95LNNnAIN8QGXBU8kQAYM2c2EsFOps8W3HFqJcK9II3fTujmEq1aygQF27pW9KA1WlF1Vk4buMh8uy6tvG7dznx6O2Xkw\",  \"projectId\" : \"PJT1099\"}"
