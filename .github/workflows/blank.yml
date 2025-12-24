@@ -1,0 +1,36 @@
+name: Execute cURL Request
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+  run_curl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run cURL command
+        run: |
+          curl --location \
+            'https://app.v3.fireflink.com/dashboardexecution/optimize/v3/public/cicd/default-machine' \
+            --header "Content-Type: application/json" \
+            --data-raw '{
+              "suiteId": "SUITE_445655d9-9df8-4e0f-bac6-f751be90ada6",
+              "waitConfig": {
+                "captureScreenshots": "failedSteps",
+                "captureVideos": "notCapture",
+                "delayBetweenSteps": "0",
+                "delayBetweenStepsUnit": "Seconds",
+                "explicitWait": "20",
+                "explicitWaitUnit": "Seconds",
+                "implicitWait": "20",
+                "implicitWaitUnit": "Seconds",
+                "terminateScriptIfTakesMoreTime": "0",
+                "terminateScriptUnit": "Minutes",
+                "terminateSuiteIfTakesMoreTime": "2",
+                "terminateSuiteUnit": "Hours"
+              },
+              "licenseId": "LIC26229",
+              "accessToken": "REPLACE_WITH_TOKEN",
+              "projectId": "PJ
